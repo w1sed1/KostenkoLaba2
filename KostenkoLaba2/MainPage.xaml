@@ -1,0 +1,101 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KostenkoLaba2.Views.MainPage"
+             Title="Робота з XML">
+    
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        
+        <Label Text="Робота з XML"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               />
+
+       
+        
+            <Grid ColumnSpacing="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Picker x:Name="ParserPicker" Title="Обрати тип парсера"
+                        FontSize="16"
+
+                        HorizontalOptions="FillAndExpand">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>SAX</x:String>
+                            <x:String>DOM</x:String>
+                            <x:String>LINQ to XML</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+              
+                <Button Grid.Column="1"
+                        Text="Пошук"
+                        FontSize="16"
+                        
+                        CornerRadius="20"
+                        Padding="10"
+                        WidthRequest="100"
+                        Clicked="OnFindClicked" />
+                <Button Grid.Column="2"
+                        Text="Очистити"
+                        FontSize="16"
+                      
+                        CornerRadius="20"
+                        Padding="10"
+                        WidthRequest="100"
+                        Clicked="OnClearClicked" />
+            </Grid>
+       
+
+       
+            <Grid RowSpacing="15" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <CheckBox x:Name="NameCheckBox" Grid.Column="0" Grid.Row="0" IsChecked="False" />
+                <Entry Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="0" 
+                       x:Name="NameEntry" Placeholder="ПІБ"
+                       FontSize="16"  />
+
+                <CheckBox x:Name="FacultyCheckBox" Grid.Column="0" Grid.Row="1" IsChecked="False" />
+                <Entry Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="1" 
+                       x:Name="FacultyEntry" Placeholder="Факультет"
+                       FontSize="16" />
+
+                <CheckBox x:Name="CourseCheckBox" Grid.Column="0" Grid.Row="2" IsChecked="False" />
+                <Picker Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="2" 
+                        x:Name="CoursePicker" Title="Виберіть курс"
+                        FontSize="16"  />
+
+                <CheckBox x:Name="RoomCheckBox" Grid.Column="0" Grid.Row="3" IsChecked="False" />
+                <Entry Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="3" 
+                       x:Name="RoomEntry" Placeholder="Номер кімнати"
+                       FontSize="16"  />
+
+            
+              
+            </Grid>
+       
+    </VerticalStackLayout>
+</ContentPage>

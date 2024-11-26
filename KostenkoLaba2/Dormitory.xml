@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Dormitory>
+	<Person FullName="Коваль Олексій Сергійович" Faculty="ІПСА" Course="3">
+		<Room>102</Room>
+	</Person>
+	<Person FullName="Ткаченко Марина Олександрівна" Faculty="ФЕА" Course="1">
+		<Room>204</Room>
+	</Person>
+	<Person FullName="Шевченко Дмитро Ігорович" Faculty="ІХФ" Course="4">
+		<Room>405</Room>
+	</Person>
+	<Person FullName="Лисенко Ганна Михайлівна" Faculty="ФЛ" Course="2">
+		<Room>305</Room>
+	</Person>
+	<Person FullName="Іваненко Софія Олегівна" Faculty="ФТІ" Course="3">
+		<Room>506</Room>
+	</Person>
+	<Person FullName="Бондар Артем Юрійович" Faculty="ІЕЕ" Course="2">
+		<Room>108</Room>
+	</Person>
+</Dormitory>

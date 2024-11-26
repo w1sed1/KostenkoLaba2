@@ -1,0 +1,70 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KostenkoLaba2.Views.Results"
+             Title="Результати пошуку">
+    
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            
+            <Label Text="Результати пошуку"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+           
+                <CollectionView x:Name="ResultsCollectionView">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            
+                                <Grid ColumnSpacing="10" RowSpacing="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                        
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Label Text="ПІБ" Grid.Column="0" Grid.Row="0"  FontAttributes="Bold" />
+                                    <Label Text="Факультет" Grid.Column="1" Grid.Row="0"  FontAttributes="Bold" />
+                                    <Label Text="Курс" Grid.Column="2" Grid.Row="0"  FontAttributes="Bold" />
+                                    <Label Text="Кімната" Grid.Column="3" Grid.Row="0"  FontAttributes="Bold" />
+                                    
+
+                                    
+                                    <Label Text="{Binding FullName}" Grid.Column="0"  Grid.Row="1" />
+                                    <Label Text="{Binding Faculty}" Grid.Column="1" Grid.Row="1" />
+                                    <Label Text="{Binding Course}" Grid.Column="2" Grid.Row="1" />
+                                    <Label Text="{Binding Room}" Grid.Column="3" Grid.Row="1" />
+                                
+                                </Grid>
+                            
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+          
+
+   
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                <Button Text="Трансформувати в HTML"
+                        FontSize="16"
+                        
+                        Padding="10"
+                        WidthRequest="230"
+                        CornerRadius="20"
+                        Clicked="OnTransformToHtmlClicked" />
+                <Button Text="Назад"
+                        FontSize="16"
+                       
+                        Padding="10"
+                        WidthRequest="150"
+                        CornerRadius="20"
+                        Clicked="OnBackButtonClicked" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
